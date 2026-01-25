@@ -1,0 +1,136 @@
+############################################################
+#                      IR Cheat Sheet                      #
+#                  Offline (Full C: Drive)                 #
+############################################################
+
+1️⃣ Jump Lists (AutomaticDestinations)
+
+Path:
+C:\Users\<USER>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations\
+
+Description:
+- Binary files per application.
+- Records files opened via that app.
+
+Evidence:
+- File name
+- Full path
+- Last accessed timestamp
+- Associated application (PowerPoint, Word, etc.)
+
+Importance:
+- ⭐⭐⭐⭐⭐ (Primary source for which file was opened)
+
+----------------------------------------
+
+2️⃣ Recent Files (LNK)
+
+Path:
+C:\Users\<USER>\AppData\Roaming\Microsoft\Windows\Recent\
+
+Description:
+- Shortcuts (.lnk) to recently opened files.
+
+Evidence:
+- File name
+- Original location
+- Last access timestamp
+
+Importance:
+- ⭐⭐⭐⭐ (Secondary confirmation)
+
+----------------------------------------
+
+3️⃣ Registry – RecentDocs
+
+Hive:
+NTUSER.DAT
+
+Key:
+HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs\.pptx
+
+Description:
+- MRU (Most Recently Used) list for .pptx files
+
+Evidence:
+- File names
+- Order of opening
+- User association
+
+Importance:
+- ⭐⭐⭐⭐ (User attribution, survives deletion of LNK)
+
+----------------------------------------
+
+4️⃣ Prefetch
+
+Path:
+C:\Windows\Prefetch\POWERPNT.EXE-*.pf
+
+Description:
+- Windows performance cache of executed programs
+
+Evidence:
+- Confirms PowerPoint was launched
+- Last run time
+- Run count
+
+Limitations:
+- ❌ Does not show which file was opened
+
+Importance:
+- ⭐⭐⭐ (Execution confirmation)
+
+----------------------------------------
+
+5️⃣ File System Metadata (NTFS)
+
+Path:
+- Anywhere on C:\ where files reside
+
+Description:
+- NTFS timestamps (M: Modified, A: Accessed, C: Created, B: Entry Modified)
+
+Evidence:
+- File creation, modification, access times
+
+Limitations:
+- ⚠️ Access time can be disabled on some systems
+
+Importance:
+- ⭐⭐⭐ (Timeline support)
+
+----------------------------------------
+
+6️⃣ PowerPoint User Data
+
+Path:
+C:\Users\<USER>\AppData\Roaming\Microsoft\PowerPoint\
+
+Description:
+- Office temp and user-specific data
+
+Evidence:
+- Temp files
+- Recent documents metadata
+
+Importance:
+- ⭐⭐⭐ (Backup evidence if LNK/Jump Lists removed)
+
+----------------------------------------
+
+Summary Table:
+
+Artifact                 | Evidence Strength
+------------------------ | ----------------
+Jump Lists               | ⭐⭐⭐⭐⭐
+Recent LNK               | ⭐⭐⭐⭐
+RecentDocs Registry      | ⭐⭐⭐⭐
+Prefetch                 | ⭐⭐⭐
+NTFS Metadata            | ⭐⭐⭐
+PowerPoint User Data     | ⭐⭐⭐
+
+Bottom Line:
+- **Jump Lists = King** for exact file and path
+- Other artifacts = supportive (timeline, user attribution, execution)
+- Best practice: correlate all sources for IR timeline analysis
