@@ -1,5 +1,4 @@
 # Windows Event Log Analysis with EvtxECmd
-## SOC & DFIR Portfolio Project
 
 ## Project Overview
 This project demonstrates practical Windows Event Log analysis using **EvtxECmd**,
