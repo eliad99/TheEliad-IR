@@ -12,6 +12,14 @@ https://www.youtube.com/watch?v=iy3Ljoi-BVA
 
 ---
 
+## Summary
+EvtxECmd is a core DFIR tool for Windows Event Log analysis.
+This project highlights practical usage aligned with SOC Analyst
+and Digital Forensics roles, emphasizing clarity, scalability,
+and forensic soundness.
+
+---
+
 ## Objectives
 - Parse Windows Event Logs outside the source system
 - Convert EVTX files into structured, analyzable formats
@@ -113,9 +121,3 @@ This project demonstrates the ability to:
 - Apply practical, hands-on skills relevant to blue team operations
 
 ---
-
-## Summary
-EvtxECmd is a core DFIR tool for Windows Event Log analysis.
-This project highlights practical usage aligned with SOC Analyst
-and Digital Forensics roles, emphasizing clarity, scalability,
-and forensic soundness.
