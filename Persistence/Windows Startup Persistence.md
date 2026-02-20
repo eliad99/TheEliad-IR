@@ -1,4 +1,4 @@
-# Windows Startup Persistence Keys (Short)
+# Windows Startup Persistence Keys
 
 ## Startup Folders
 Common locations for startup files:
